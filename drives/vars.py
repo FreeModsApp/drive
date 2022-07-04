@@ -4,6 +4,8 @@
 from os import environ
 from dotenv import load_dotenv
 
+token = '5228882236:AAE7YS2e-yxLOGVqOlCliM1s1wM1NDy3Bmw'
+
 load_dotenv()
 
 
