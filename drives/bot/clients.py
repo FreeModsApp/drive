@@ -4,11 +4,11 @@ import logging
 from ..vars import Var
 from pyrogram import Client
 from drives.utils import TokenParser
-from . import multi_clients, work_loads, Bot
+from . import multi_clients, work_loads, bot
 
 
 async def initialize_clients():
-    multi_clients[0] = Bot
+    multi_clients[0] = bot
     work_loads[0] = 0
     all_tokens = TokenParser().parse_from_env()
     if not all_tokens:
