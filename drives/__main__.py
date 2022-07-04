@@ -20,17 +20,17 @@ loop = asyncio.get_event_loop()
 
 async def start_services():
 	print()
-    print("-------------------- Initializing Telegram Bot --------------------")
-    await bot.start()
-    bot_info = await bot.get_me()
-    bot.username = bot_info.username
-    print("------------------------------ DONE ------------------------------")
-    print()
-    print(
-        "---------------------- Initializing Clients ----------------------"
-    )
-    await initialize_clients()
-    print("------------------------------ DONE ------------------------------")
+	print("-------------------- Initializing Telegram Bot --------------------")
+	await bot.start()
+	bot_info = await bot.get_me()
+	bot.username = bot_info.username
+	print("------------------------------ DONE ------------------------------")
+	print()
+	print(
+		"---------------------- Initializing Clients ----------------------"
+	)
+	await initialize_clients()
+	print("------------------------------ DONE ------------------------------")
 	print('\n')
 	print('------------------- Importing -------------------\n')
 	for name in files:
