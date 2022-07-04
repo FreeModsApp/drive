@@ -44,7 +44,7 @@ async def media_streamer(request, message_id: int, cus_name=None): # start downl
         logging.debug(f"Using cached ByteStreamer object for client {index}")
     else:
         logging.debug(f"Creating new ByteStreamer object for client {index}")
-        tg_connect = utils.ByteStreamer(faster_client)
+        tg_connect = utils.TGCustomYield(faster_client)
         class_cache[faster_client] = tg_connect
     logging.debug("before calling get_file_properties")
     file_id = await tg_connect.get_file_properties(message_id)
